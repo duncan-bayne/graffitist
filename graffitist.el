@@ -7,7 +7,7 @@
     (if action
         (funcall action filename project-directory))))
 
-(defun graffitist--find-project-directory (filename)
+(defun graffitist--find-project-dir (filename)
   "Finds the project directory for the specified filename.  Returns nil if there is no project directory.
 The project directory is defined as the first directory upwards in the hierarchy containing .git."
   (let ((directory-name (locate-dominating-file filename ".git")))
