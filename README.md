@@ -17,7 +17,7 @@ Consider a Ruby project that uses [ripper-tags](https://github.com/tmm1/ripper-t
     (setq graffitist:rules
           '((".*\.rb" . (lambda (file-name project-dir-name) (shell-command "ripper-tags -R -f TAGS")))))
 
-This specifies the action - in this case, a shell out to ripper-tags - to be executed when the filename of the saved buffer matches the associated regex.  Note the function is called with two parameters that specify the absolute filename of the saved buffer, and the absolute pathname containing the project.
+This specifies the action - in this case, a shell out to ripper-tags - to be executed when the filename of the saved buffer ends in `.rb`.  Note the function is called with two parameters that specify the absolute filename of the saved buffer, and the absolute pathname containing the project.
 
 ## FAQ
 
