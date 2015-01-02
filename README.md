@@ -21,6 +21,9 @@ This specifies the action - in this case, a shell out to ripper-tags - to be exe
 
 ## FAQ
 
+### are there any security issues?
+graffitist is by design insecure; that is, it provides a mechanism for projects to specify arbitrary behaviour when buffers are saved.  [#3](https://github.com/duncan-bayne/graffitist/issues/3) is where I'm mulling this.  For now, caveat emptor, YMMV, etc.
+
 ### what defines a project?
 A project is defined as the first directory up the hierarchy from the saved buffer that contains a .git directory.  If no such directory is found, the saved buffer is deemed not part of a project, and no action is performed.
 
