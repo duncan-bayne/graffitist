@@ -14,8 +14,8 @@ You can then create a `.graffitist` file in each project for which you want cust
 
 Consider a Ruby project that uses [ripper-tags](https://github.com/tmm1/ripper-tags) to generate ctags.  You might create a .graffitist file in the root of the project directory that contains the following:
 
-    (setq graffitist:rules
-          '((".*\.rb" . (lambda (file-name project-dir-name) (shell-command "ripper-tags -R -f TAGS")))))
+    (setq graffitist-rules
+        '((".*\.rb" . (lambda (file-name project-dir-name) (shell-command "~/.rbenv/shims/ripper-tags -R ~/project -f ~/project/TAGS")))))
 
 This specifies the action - in this case, a shell out to ripper-tags - to be executed when the filename of the saved buffer ends in `.rb`.
 
